@@ -1,0 +1,268 @@
+body{
+    margin: 0;
+    background: #010001;
+    color:white;
+    padding-top: 53px;
+    font-family: 'Roboto', sans-serif;
+}
+/*Верхняя часть страницы с навигацией и логотипом*/
+header{
+    max-width: 1231px;
+    width:90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+/*Список в навигации*/
+.list{
+    display: flex; 
+    padding: 0;
+    margin: 0;   
+    list-style: none;
+    font-size: 12px;
+    line-height: 14px;
+}
+/*Стиль сслыки в верхней части страницы*/
+header a{
+    text-decoration: none;
+}
+/*Стиль ссылки в основной навигации*/
+.main-nav a{
+    color: #FFFFFF;
+}
+/*Стиль ссылки в побочной навигации*/
+.secondary-nav a{
+    color: #808080;
+}
+/*Элемент списка в навигации*/
+.item{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/*Основное содержимое страницы*/
+main {
+    text-align: center;
+    padding-top: 190px;
+    padding-bottom: 30px;
+}
+/*Главный заголовок*/
+main .title{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 75px;
+    margin-bottom: 26px;
+    margin-top: 0px;
+}
+/*Подпись под главным заголовком*/
+main .desk{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+    max-width: 268px;
+    margin: auto;
+    text-transform: lowercase;
+}
+/*Линия между подписью и видео*/
+main .desk:after{
+    content: "";
+    display: block;
+    height:60px;
+    width: 1px;
+    background-color: #fff;
+    margin:auto;
+    margin-top:26px;
+}
+/*Видео*/
+.video{
+    max-width: 1231px;
+    width:90%;
+    margin: auto;
+    height: 750px;
+    
+}
+/*Преимущества (Overview и UNMATCHED PERFORMANCE)*/
+.ft{
+    position: relative;
+    max-width: 1230px;
+    width:90%;
+    margin: auto;
+    padding: 100px 0px;
+    margin-top: 45px;
+}
+/*Заголовоки в Преимуществах*/
+.ft-title{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 140%;  
+
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+    
+}
+/*Таблица с информацией о ракете*/
+.table{
+    margin-bottom: 200px;
+}
+/*Альтернативные значения в таблице*/
+.table .futi{
+   
+    display: inline;
+    color:#b2b0b2;
+}
+/*Ячейка таблицы*/
+.table td{
+    width: 300px;
+    min-height: 60px;
+    padding:7px 0px;
+    font-size: 18px;
+    line-height: 179.69%;
+}
+/*Заголовок "UNMATCHED PERFORMANCE"*/
+.ft-title-bt{
+    margin-bottom: 45px;
+}
+/*Текст под нижним заголовком*/
+.ft-text{
+    max-width:490px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 29px;
+}
+
+/*Изображение ракеты*/    
+.rocket{   
+    max-width: 300px;        
+    position: absolute;
+    top:50;
+    right:0;
+    z-index: 99;
+    
+}
+/*Подвал*/
+footer{
+     
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    max-width: 1230px;
+    height: auto;
+    margin: auto;     
+    padding: 130px ;
+    
+}
+/*Навигация в подвале*/
+.footer-nav .list{
+    padding-top: 30px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+/*Стиль ссылок в подвале*/
+.footer-nav a{
+    color:#fff;  
+    text-decoration: none;  
+}
+/*Стиль ссылок в подвале при наведении курсора*/
+.footer-nav a::after{
+    text-decoration: underline;
+    color:#fff;
+}
+/*Текст в подвале*/
+.footer-text{
+    margin-top: 0px;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #808080;
+}
+/*Элемент Contact us*/
+.contact{
+    color:#FFFFFF;
+    min-width: 260px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    border-radius: 6px;
+    text-decoration: none;
+}
+/*
+Медиа-запросы для адаптивности страницы 
+под разные размеры экранов пользователей
+*/ 
+
+@media (max-width:1230px){
+    .rocket{
+        max-width: 270px;
+    }
+}
+@media (max-width:960px){
+    .rocket{
+        max-width: 230px;
+    }
+    .table td{
+        width:250px;
+    }
+}
+@media(max-width: 768px ){
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-nav{
+        margin-bottom:20px ;
+    }
+    .logo-header{
+        margin-bottom:20px ;
+    }
+    .rocket{
+        max-width: 180px;
+    }
+    .video{
+        width: 100%;         
+    }
+}
+@media(max-width: 576px ){
+    .rocket{
+        position: static;
+    }
+    .table{
+        margin-bottom: 0px;
+    }
+    .table td{
+        font-size: 14px;
+        width: 150px;
+    }
+    .footer-nav .list{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-nav .item{
+        margin-bottom: 10px;
+    }    
+    footer{
+        text-align: center;
+        padding-bottom: 40px;
+    }
+    main{
+        padding-top: 50px;
+    }
+    .ft{
+        padding-bottom: 0px;
+    }
+} 
